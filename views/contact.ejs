@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="contacts.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/items">Items</a></li>
+            <li><a href="/stocks">Market</a></li>
+            <li><a href="/earnings">IBM</a></li>
+            <li><a href="/nasa">Nasa</a></li>
+            <% if (username) { %>
+                <li style="float:right"><a class="active" href="/logout">Logout</a></li>
+                <li style="float:right"><a class="active"><%= username %>!</a></li>
+            <% } else { %>
+                <li style="float:right"><a class="active" href="/register">Register</a></li>
+                <li style="float:right"><a class="active" href="/login">Login</a></li>
+            <% } %>
+          </ul>
+    </nav>
+    <div style="text-align: center; font-size: larger;">
+        <h1>Contacts:</h1>
+        <div class="links">
+            <a href="https://www.instagram.com/" class="custom-link">Instagram</a>
+            <a href="https://web.telegram.org/" class="custom-link">Telegram</a>
+            <a href="https://twitter.com/?lang=ru" class="custom-link">Twitter</a>
+            <a href="https://www.youtube.com/" class="custom-link">Youtube</a>
+        </div>
+    </div>
+    <footer>
+        <p>Arman Erzen SE-2210</p>
+    </footer>
+</body>
+</html>

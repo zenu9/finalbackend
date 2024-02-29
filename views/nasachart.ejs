@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Astronomy Picture</title>
+    <link rel="stylesheet" href="charts.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/items">Items</a></li>
+            <li><a href="/stocks">Market</a></li>
+            <li><a href="/earnings">IBM</a></li>
+            <li><a href="/nasa">Nasa</a></li>
+            <% if (username) { %>
+                <li style="float:right"><a class="active" href="/logout">Logout</a></li>
+                <li style="float:right"><a class="active"><%= username %>!</a></li>
+            <% } else { %>
+                <li style="float:right"><a class="active" href="/register">Register</a></li>
+                <li style="float:right"><a class="active" href="/login">Login</a></li>
+            <% } %>
+          </ul>
+    </nav>
+    <h1>Nasa Astronomy Picture of the Day</h1>
+    <div>
+        <p>Date: <%= date %></p>
+        <p>Picture URL: <%= image %></p>
+        <img src="<%= image %>" alt="APOD Nasa">
+    </div>
+</body>
+</html>
